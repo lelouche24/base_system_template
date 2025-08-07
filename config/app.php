@@ -1,5 +1,6 @@
 <?php
 
+use App\Helpers\BaseService;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
@@ -169,6 +170,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
+        App\Providers\TreeServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -184,6 +186,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Helper' => App\Helpers\Helper::class,
+        'BaseService' => App\Helpers\BaseService::class,
     ])->toArray(),
 
 ];

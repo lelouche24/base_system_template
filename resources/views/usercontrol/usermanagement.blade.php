@@ -1,29 +1,67 @@
 @extends('layout.main')
 @section('content')
-@include('usercontrol.modal.add_editModal')
-<main class="app-main" style="background-color: rgb(255, 245, 237)">
-            <div class="app-content">
+    {{-- @include('usercontrol.modal.add_editModal') --}}
 
-                <div class="container-fluid">
-                    <div class="col-md-12 mt-2">
-                        <table class="table table-striped table-hover table-sm small" id="usermanagementTable">
-                            <thead class="align-middle bg-success">
-                                <tr>
-                                    <th class="text-white">USERNAME</th>
-                                    <th class="text-white">FULLNAME</th>
-                                    <th class="text-white">DEPARTMENT</th>
-                                    <th class="text-white">POSITION</th>
-                                    <th class="text-white">USER TYPE</th>
-                                    <th class="text-white text-center">STATUS</th>
-                                    <th class="text-white text-center">ACTION</th>
-                                    <th><a type="button" class="btn btn-warning btn-sm float-start m-1" style="font-weight: bold;" id="add_edit_userBtn"><i class="fa-solid fa-user-plus"></i></a></th>
-                                </tr>
-                            </thead>
-                            <tbody class="align-middle">
-                            </tbody>
-                        </table>
+            {{-- <table class="table table-striped table-hover table-sm" id="usermanagementTable">
+                <thead class="align-middle bg-dark">
+                    <tr>
+                        <th style="text-align: center; vertical-align: middle;">USERNAME</th>
+                        <th style="text-align: center; vertical-align: middle;">FULLNAME</th>
+                        <th style="text-align: center; vertical-align: middle;">ACTIVE</th>
+                        <th style="text-align: center; vertical-align: middle;">ONLINE</th>
+                        <th style="text-align: center; vertical-align: middle">ACTION</th>
+                        <th><a type="button" class="btn btn-light btn-sm float-start m-1" style="font-weight: bold;"
+                                id="add_edit_userBtn"><i class="fas fa-user-plus"></i></a></th>
+                    </tr>
+                </thead>
+                <tbody class="align-middle">
+                </tbody>
+            </table> --}}
+
+            <div class="row pt-3">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-dark">
+                            <h3 class="card-title text-bold pt-2">USER LIST</h3>
+                            <div class="float-right d-flex align-items-center">
+                                <button class="btn btn-light btn-sm me-2 text-dark text-bold rounded-0" id="btn_add">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-bordered TBL_USER" id="TBL_USER"
+                                            style="width: 100%; margin:auto; white-space: nowrap !important;">
+                                            <thead>
+                                                <tr class="text-center align-middle">
+                                                    <th>USERNAME</th>
+                                                    <th>FULL NAME</th>
+                                                    <th>ACTIVE</th>
+                                                    <th>ONLINE</th>
+                                                    <th>ACTION</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <div class="col-12">
+                    <div id="modal-body"></div>
+                </div>
+
             </div>
-        </main>
-@include('usercontrol.script.usermanagementJS')
+
+    {{-- @include('usercontrol.script.usermanagementJS') --}}
+    @include('usercontrol.script.usermenuScript')
 @endsection

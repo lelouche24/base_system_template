@@ -1,9 +1,9 @@
-<div class="modal fade" id="add_edit_userModal" tabindex="-1" aria-labelledby="add_edit_userModalLabel" aria-hidden="true" data-bs-backdrop="static">
+<div class="modal fade" id="add_edit_userModal" tabindex="-1" aria-labelledby="add_edit_userModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header bg-success">
-          <h1 class="modal-title fs-6 text-white" id="add_edit_userModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-header bg-dark">
+          <h1 class="modal-title text-white" id="add_edit_userModalLabel" style="font-size: 14pt; font-weight: bold;">Modal title</h1>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
 
@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label style="font-size: 11pt;" for="admin_usertype">User Type</label>
-                    <select name="admin_usertype" id="admin_usertype" class="form-select form-select-sm" required>
+                    <select name="admin_usertype" id="admin_usertype" class="form-control form-select-sm" required>
                         <option value="">Select</option>
                         <option value="superadmin">SUPER ADMIN</option>
                         <option value="admin">ADMIN</option>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label style="font-size: 11pt;" for="admin_department">Department</label>
-                    <select name="admin_department" id="admin_department" class="form-select form-select-sm" required>
+                    <select name="admin_department" id="admin_department" class="form-control form-select-sm" required>
                         <option value="">Select</option>
                         <option value="AFD">ADMINISTRATIVE & FINANCE DIVISION</option>
                         <option value="QMR">QUALITY MANAGEMENT REPRESENTATIVE</option>
@@ -69,19 +69,19 @@
         </div>
 
         <div class="modal-footer">
-            <button type="submit" class="btn btn-primary btn-sm">Save</button>
+            <button type="submit" class="btn btn-dark btn-sm">Save</button>
           </div>
         </form>
         </div>
       </div>
 </div>
 
-<div class="modal fade" id="edit_userModal" tabindex="-1" aria-labelledby="edit_userModalLabel" aria-hidden="true" data-bs-backdrop="static">
+<div class="modal fade" id="edit_userModal" tabindex="-1" aria-labelledby="edit_userModalLabel" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header bg-success">
-          <h1 class="modal-title fs-6 text-white" id="edit_userModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-header bg-dark">
+          <h1 class="modal-title fs-6 text-white" id="edit_userModalLabel" style="font-size: 14pt; font-weight: bold;">Modal title</h1>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
 
@@ -115,7 +115,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label style="font-size: 11pt;" for="admin_edit_department">Department</label>
-                        <select name="admin_edit_department" id="admin_edit_department" class="form-select form-select-sm" required>
+                        <select name="admin_edit_department" id="admin_edit_department" class="form-control form-select-sm" required>
                             <option value="">Select</option>
                             <option value="AFD">ADMINISTRATIVE & FINANCE DIVISION</option>
                             <option value="QMR">QUALITY MANAGEMENT REPRESENTATIVE</option>
@@ -132,7 +132,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label style="font-size: 11pt;" for="admin_edit_usertype">User Type</label>
-                        <select name="admin_edit_usertype" id="admin_edit_usertype" class="form-select form-select-sm" required>
+                        <select name="admin_edit_usertype" id="admin_edit_usertype" class="form-control form-select-sm" required>
                             <option value="superadmin">SUPER ADMIN</option>
                             <option value="admin">ADMIN</option>
                             <option selected value="user">USER</option>

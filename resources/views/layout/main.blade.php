@@ -15,17 +15,23 @@
 @include('layout.cdn.css')
 </head>
 
-<body class="layout-fixed sidebar-expand-lg sidebar-mini bg-body-tertiary">
+<body class="layout-fixed sidebar-expand-lg sidebar-mini">
 
-    <div class="app-wrapper">
+<div class="wrapper">
 
 @include('layout.header')
 
 @include('layout.sidebar')
 
-@yield('content')
+<div class="content-wrapper">
+        <div class="content">
+            <div class="container-fluid py-2 px-2">
+                @yield('content')
+            </div>
+        </div>
+</div>
 
-    </div>
+</div>
 
 @include('layout.cdn.js')
 @stack('scripts')
